@@ -1,56 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body>
-<?
+<?php 
+include("includes/header.php");
+include("helpers/Parser.php");
 
-include('Parser.php');
-
-$lesson_str = "
-<mainTitle>Lesson 1 - JavaScript</mainTitle>
-<section>
-  <title>For Loops</title>
-  <heading>Introduction</heading>
-  <text>A for-loop eats shit. It's really cool. Loops and shit. Iteration BOYS.</text>
-  <code>
-    for i in range(5):
-      write('fuck you');
-      &lt;Baddddy&gt;
-  </code>
-  <text>Here are more reasosn why I'm cool</text>
-  <list>
-    <listItem>Because I am</listItem>
-    <listItem>Because you're not</listItem>
-  </list>
-</section>
-";
-
-echo parseLesson($lesson_str);
-
-$quiz_str = "
-<quizTitle>JavaScript Quiz 1</quizTitle>
-
-<content>
-
-<quizItem>
-  <question>What was the quesiton here?</question>
-  <answer>Hi there :)</answer>
-  <answer>Hello friendd</answer>
-  <answer>Wassupp</answer>
-  <correctAnswer>Hello friendd</correctAnswer>
-</quizItem>
-
-<quizItem>
-  <question>Here is another question</question>
-  <answer>Hi there :)</answer>
-  <answer>Hello friendd</answer>
-  <answer>Wassupp</answer>
-  <correctAnswer>Hello friendd</correctAnswer>
-</quizItem>
-
-</content>
-";
-
-echo parseQuiz($quiz_str);
+$first_name = $user['first_name'];
+$user = $user['email'];
 ?>
 
-<h1>Yoo</h1>
+<div class="container">
+  <h1 class="title">Your Courses</h1>
+</div>

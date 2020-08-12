@@ -44,6 +44,7 @@ function parseSectionListItem($text) {
   return parseItem($text, "/listitem>/i", "li>");
 }
 
+// what needs to actually be called
 function parseLesson($text) {
   $text = parseHeading($text);
   $text = parseSection($text);
@@ -81,6 +82,7 @@ function parseQuizCorrectAnswer($text) {
   return parseItem($text, "/correctAnswer>/i", "li>");
 }
 
+// WHAT NEEDS TO BE CALLED
 function parseQuiz($text) {
   $text = parseQuizTitle($text);
   $text = parseQuizContent($text);
