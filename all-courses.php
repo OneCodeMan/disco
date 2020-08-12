@@ -16,6 +16,7 @@ $user = $user['email'];
     if($all_courses_row_count > 0) {
       while($row = mysqli_fetch_array($all_courses_query)) {
         $courseId = $row['course_id'];
+        $courseTitle = $row['course_title'];
         $itemId = $row['item_id'];
         $title = $row['title'];
         $description = $row['description'];
@@ -24,7 +25,7 @@ $user = $user['email'];
 
         $all_courses_html .= "
           <div class='course-container'>
-            <a class='course-title' href=$courseURL>$title</a>
+            <a class='course-title' href=$courseURL>$courseTitle: $title</a>
             <p class='description'>$description</p>
             <a href='path/to/add/course>
               <button class='add-course-btn'>Add Course</button>
