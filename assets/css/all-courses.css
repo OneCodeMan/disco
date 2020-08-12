@@ -2,3 +2,21 @@
   text-align: center;
   margin-top: 10px;
 }
+
+.course-container {
+  border: solid;
+  padding: 20px;
+  font-family: "Avenir Next";
+  border-radius: 6px;
+}
+
+.course-title {
+  color: black;
+  text-decoration: underline;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+}

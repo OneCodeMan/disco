@@ -28,15 +28,16 @@ $user = $user['email'];
             <a class='course-title' href=$courseURL>$courseTitle: $title</a>
             <p class='description'>$description</p>
             <a href='path/to/add/course>
-              <button class='add-course-btn'>Add Course</button>
+              <button class='add-course-btn'>Save Course</button>
             </a>
           </div>
+          <hr>
         ";
       }
     }
 
-    $all_courses_html .= "</div>";
-    echo $all_courses_html;
+  $all_courses_html .= "</div>";
+  echo $all_courses_html;
 
   ?>
 </div>

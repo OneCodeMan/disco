@@ -7,5 +7,33 @@ $user = $user['email'];
 ?>
 
 <div class="container">
-  <h1 class="title">Your Courses</h1>
+  <?php 
+      $all_courses_query = mysqli_query($con, "SELECT * FROM selected_courses WHERE email='$user'");
+      $all_courses_row_count = mysqli_num_rows($all_courses_query);
+      $all_courses_html = '<div class="courses">';
+
+      if($all_courses_row_count > 0) {
+        while($row = mysqli_fetch_array($all_courses_query)) {
+          $courseId = $row['course_id'];
+          $courseTitle = $row['course_title'];
+          $itemId = $row['item_id'];
+          $itemTitle = $row['item_title'];
+          $courseURL = "./course.php?course_id=$courseId&item_id=$itemId";
+
+          $all_courses_html .= "
+            <div class='course-container'>
+              <a class='course-title' href=$courseURL>$courseTitle: $itemTitle</a>
+              <a href='path/to/add/course>
+                <button class='add-course-btn'>Remove Course</button>
+              </a>
+            </div>
+            <hr>
+          ";
+        }
+      }
+
+    $all_courses_html .= "</div>";
+    echo $all_courses_html;
+
+  ?>
 </div>
