@@ -4,6 +4,8 @@ include("helpers/Parser.php");
 
 $first_name = $user['first_name'];
 $user = $user['email'];
+
+
 ?>
 
 <div class="container">

@@ -4,6 +4,24 @@ include("helpers/Parser.php");
 
 $first_name = $user['first_name'];
 $user = $user['email'];
+
+if(isset($_POST['save_course'])) {
+  $courseID = $_POST['course_id'];
+  $courseTitle = $_POST['course_title'];
+  $itemID = $_POST['item_id'];
+  $title = $_POST['title'];
+
+  // check if course is saved already
+  $check_course_saved_query = mysqli_query($con, "SELECT * FROM selected_courses WHERE course_id='$courseID' AND item_id='$itemID' AND email='$user'");
+  $check_course_saved_query_num_rows = mysqli_num_rows($check_course_saved_query);
+
+  if(!($check_course_saved_query_num_rows > 0)) {
+    $save_course_query = mysqli_query($con, "INSERT INTO selected_courses VALUES(null, '$user', '$courseID', '$courseTitle', '$itemID', '$title')");
+  } else {
+    // user already saved course
+  }
+
+}
 ?>
 
 <div class="container">
@@ -27,8 +45,12 @@ $user = $user['email'];
           <div class='course-container'>
             <a class='course-title' href=$courseURL>$courseTitle: $title</a>
             <p class='description'>$description</p>
-            <a href='path/to/add/course>
-              <button class='add-course-btn'>Save Course</button>
+            <form action='all-courses.php' class='save-course-form' method='POST'>
+              <input type='number' name='course_id' value='$courseId' class='form-hide' />
+              <input type='number' name='item_id' value='$itemId' class='form-hide' />
+              <input type='text' name='course_title' value='$courseTitle' class='form-hide' />
+              <input type='text' name='title' value='$title' class='form-hide' />
+              <input type='submit' name='save_course' class='add-course-btn' id='add-course' value='Save Course'/>
             </a>
           </div>
           <hr>
