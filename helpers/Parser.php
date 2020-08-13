@@ -75,7 +75,13 @@ function parseQuizQuestion($text) {
 }
 
 function parseQuizAnswer($text) {
-  return parseItem($text, "/answer>/i", "li>");
+  $replacement = "
+  <label>
+    <input type='radio' name='question' value='test'>
+  </label>
+  ";
+  $pattern = "/<answer>/i";
+  return parseItem($text, $pattern, $replacement);
 }
 
 function parseQuizCorrectAnswer($text) {
