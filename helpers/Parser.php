@@ -75,16 +75,12 @@ function parseQuizQuestion($text) {
 }
 
 function parseQuizAnswer($text) {
-  $replacement = "
-  <label>
-    <input type='radio' name='question' value='test'>
-  </label>
-  ";
-  $pattern = "/<answer>/i";
-  return parseItem($text, $pattern, $replacement);
+  return parseItem($text, "/answer>/i", "li>");
 }
 
 function parseQuizCorrectAnswer($text) {
+  $replacement = "<li class='correct-answer'>'";
+  $text = parseItem($text, "/<correctAnswer>/i", $replacement);
   return parseItem($text, "/correctAnswer>/i", "li>");
 }
 
@@ -94,8 +90,8 @@ function parseQuiz($text) {
   $text = parseQuizContent($text);
   $text = parseQuizItem($text);
   $text = parseQuizQuestion($text);
-  $text = parseQuizAnswer($text);
   $text = parseQuizCorrectAnswer($text);
+  $text = parseQuizAnswer($text);
   return $text;
 }
 

@@ -31,6 +31,7 @@ if (isset($_SESSION['email'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/all-courses.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/course.css">
 </head>
 <body>
 

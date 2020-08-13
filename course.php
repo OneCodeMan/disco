@@ -23,7 +23,9 @@ if(!($course_fetch_num_rows > 0)) {
 
 <div class="container">
   <h1 class="title"><?php echo $title ?></h1>
-  <?php
-    echo $parsedContent;
-  ?>
+  <div class="parsed-content">
+    <?php
+      echo $parsedContent;
+    ?>
+  </div>
 </div>
