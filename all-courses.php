@@ -51,6 +51,7 @@ if(isset($_POST['save_course'])) {
               <input type='text' name='course_title' value='$courseTitle' class='form-hide' />
               <input type='text' name='title' value='$title' class='form-hide' />
               <input type='submit' name='save_course' class='add-course-btn' id='add-course' value='Save Course'/>
+            </form>
             </a>
           </div>
           <hr>
