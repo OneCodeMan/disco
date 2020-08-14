@@ -1,3 +1,9 @@
 .correct-answer {
-  display: none;
+  background-color: black;
+  color: black;
+  width: 40%;
+}
+
+.correct-answer:hover {
+  background-color: white;
 }

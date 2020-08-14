@@ -79,9 +79,9 @@ function parseQuizAnswer($text) {
 }
 
 function parseQuizCorrectAnswer($text) {
-  $replacement = "<li class='correct-answer'>'";
+  $replacement = "<p class='correct-answer'>Correct Answer: ";
   $text = parseItem($text, "/<correctAnswer>/i", $replacement);
-  return parseItem($text, "/correctAnswer>/i", "li>");
+  return parseItem($text, "/correctAnswer>/i", "p>");
 }
 
 // WHAT NEEDS TO BE CALLED

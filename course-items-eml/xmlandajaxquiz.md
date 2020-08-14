@@ -7,7 +7,7 @@
   <answer>Extensible Markup Language</answer>
   <answer>Extensible Marking Language</answer>
   <answer>Extraordinary Markup Language</answer>
-  <correctAnswer>xtensible Markup Language</correctAnswer>
+  <correctAnswer>Extensible Markup Language</correctAnswer>
 </quizItem>
 
 <quizItem>

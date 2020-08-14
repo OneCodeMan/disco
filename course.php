@@ -24,6 +24,7 @@ if(!($course_fetch_num_rows > 0)) {
 <div class="container">
   <h1 class="title"><?php echo $title ?></h1>
   <div class="parsed-content">
+    <p style="text-align: center;">Note: hover over the black rectangles to see the correct answer</p>
     <?php
       echo $parsedContent;
     ?>
